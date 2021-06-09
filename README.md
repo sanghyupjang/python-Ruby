@@ -90,14 +90,3 @@ One of the differences from Python and Perl is that Ruby keeps all of its instan
 Python's property descriptors are similar, but come with a tradeoff in the development process. If one begins in Python by using a publicly exposed instance variable, and later changes the implementation to use a private instance variable exposed through a property descriptor, code internal to the class may need to be adjusted to use the private variable rather than the public property. Ruby’s design forces all instance variables to be private, but also provides a simple way to declare set and get methods. This is in keeping with the idea that in Ruby, one never directly accesses the internal members of a class from outside the class; rather, one passes a message to the class and receives a response.
 
 See the Examples section below for samples of code demonstrating Ruby syntax.
-
-
-
- <h2>Reference site</h2> 
- 
- 
- https://opentutorials.org/course/1
- 
- 
- 
- https://www.wikipedia.org/
