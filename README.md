@@ -13,40 +13,60 @@
 
 
 <h2>Python</h2>
-Python is an interpreted high-level programming language for general-purpose programming. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales. In July 2018, Van Rossum stepped down as the leader in the language community after 30 years.
 
-Python features a dynamic type system and automatic memory management. It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library.
+창시자는 귀도 반 로섬(Guido van Rossum). 1989년 크리스마스 주에, 연구실이 닫혀있어서 심심한 김에 만든 프로그래밍 언어이다. 농담이 아니고 반 로섬을 유럽에서는 애덤 스미스에 비교할 정도다. 프로그래밍 계의 경제학자라나... 심심해서 만들었다는 것은 파이썬 서문과 마이크로소프트웨어와 한 인터뷰를 보면 알겠지만 사실이다. 능력 있는 기술자들은 대부분 심심할 때, 혹은 실수로 걸작을 만든다. 2000년에는 Python 2, 2008년에는 Python 3가 나왔다.
 
-Python interpreters are available for many operating systems. CPython, the reference implementation of Python, is open source software and has a community-based development model, as do nearly all of Python's other implementations. Python and CPython are managed by the non-profit Python Software Foundation.
+이름은 귀도가 즐겨 보던 영국의 6인조 코미디 그룹 몬티 파이선에서 따왔다고 한다. 지금 CPython의 공식 GitHub 저장소를 보면 협업보조용 봇 이름들이 the-knights-who-say-ni(니라고 말하는 기사)나 bedevere(베디비어) 같이 죄다 몬티 파이튼의 성배의 배역들이다. 많은 파이썬 교재들에서 변수 이름을 spam, eggs로 짓는 등 드립을 친다. 직접적 관계는 없지만 42도 필수요소. 또한 시작 프로그램 중 하나의 이름이 아이들(Idle)인데, 탄생배경을 생각해 본다면 몬티 파이선의 멤버 에릭 아이들(Eric Idle)의 이름에서 유래하였을 가능성이 높다. 물론 사전적 의미를 생각 안 하는 건 아니라서 심볼마크가 뱀 모양이다.
 
-<h2>Syntax and semantics</h2>
-Main article: Python syntax and semantics
-Python is meant to be an easily readable language. Its formatting is visually uncluttered, and it often uses English keywords where other languages use punctuation. Unlike many other languages, it does not use curly brackets to delimit blocks, and semicolons after statements are optional. It has fewer syntactic exceptions and special cases than C or Pascal.
+문법이 매우 쉬워서 초보자들이 처음 프로그래밍을 배울 때 추천되는 언어이다. 오죽하면 Python의 별명이 '실행할 수 있는 의사 코드(Executable pseudocode)'일 정도. 실제로도 미국 공과 대학교에서 컴퓨터 프로그래밍 입문 수업으로 Python을 많이 사용하기도 한다. 학습용으로 좋은 언어인 동시에 실사용률과 생산성도 높은 강력한 언어인 셈. 즉 접근성과 응용력이 좋다는 게 굉장히 중요하다. Python의 이런 두 마리 토끼는 교육용 프로그래밍 언어인 BASIC이 망했어요 루트를 타게 된 결정적인 이유이다. Python은 BASIC과 달리 학교에서 배우고 끝나는 게 아니라 현업에서도 자주 쓰이는 언어이기 때문이다. 농담이 아니고 파이썬이 교육용 언어로 자리잡으면서 베이직은 마이크로소프트에 의해 산소호흡기를 달고 연명만 하는 신세가 됐다. MS가 없으면 BASIC은...
 
-<h2>Methods</h2>
-Methods on objects are functions attached to the object's class; the syntax instance.method(argument) is, for normal methods and functions, syntactic sugar for Class.method(instance, argument). Python methods have an explicit self parameter to access instance data, in contrast to the implicit self (or this) in some other object-oriented programming languages (e.g., C++, Java, Objective-C, or Ruby).
+2010년 후반대에 이르러서는 풍부한 머신러닝 라이브러리와 프레임웍으로 머신러닝, 딥러닝등 인공지능 개발을 위한 언어로서 각광을 받고 있다. 사이킷-런(Scikit-learn), 텐서플로우(TensorFlow), CNTK, 아파치 스파크 MLlib(Apache Spark MLlib), 파이토치(PyTorch)등 성능도 뛰어나며 많이 사용되는 머신러닝, 딥러닝 프레임웍들이 파이썬으로 접근이 가능하다.
 
-<h2>Mathematics</h2>
-Python has the usual C language arithmetic operators (+, -, *, /, %). It also has ** for exponentiation, e.g. 5**3 == 125 and 9**0.5 == 3.0, and a new matrix multiply @ operator is included in version 3.5. Additionally, it has a unary operator (~), which essentially inverts all the bits of its one argument. For integers, this means ~x=-x-1. Other operators include bitwise shift operators x << y, which shifts x to the left y places, the same as x*(2**y) , and x >> y, which shifts x to the right y places, the same as x//(2**y) .
+<h2>만능 언어</h2>
 
-The behavior of division has changed significantly over time:[why?]
+파이썬은 위의 특징 때문에 교육용 프로그래밍 언어로 각광받고 있다. 한국, 미국의 여러 대학교 프로그래밍 교육들은 개론 수업 언어를 C, C++나 Java에서 Python으로 옮겨가는 추세다.
 
-Python 2.1 and earlier use the C division behavior. The / operator is integer division if both operands are integers, and floating-point division otherwise. Integer division rounds towards 0, e.g. 7/3 == 2 and -7/3 == -2.
-Python 2.2 changes integer division to round towards negative infinity, e.g. 7/3 == 2 and -7/3 == -3. The floor division // operator is introduced. So 7//3 == 2, -7//3 == -3, 7.5//3 == 2.0 and -7.5//3 == -3.0. Adding from __future__ import division causes a module to use Python 3.0 rules for division (see next).
-Python 3.0 changes / to be always floating-point division. In Python terms, the pre-3.0 / is classic division, the version-3.0 / is real division, and // is floor division.
-Rounding towards negative infinity, though different from most languages, adds consistency. For instance, it means that the equation (a + b)//b == a//b + 1 is always true. It also means that the equation b*(a//b) + a%b == a is valid for both positive and negative values of a. However, maintaining the validity of this equation means that while the result of a%b is, as expected, in the half-open interval [0, b), where b is a positive integer, it has to lie in the interval (b, 0] when b is negative.
+주의할 점은 Python이 배우기 쉽다는 건 프로그래머 입장에서 나온 말이라는 것이다. 그마저도 다른 언어에 비해 비교적으로 쉽다는 뜻이지, 깊게 파고 들어가거나 특유의 '파이썬스러움(pythonic)'한 코딩을 하려면 생각보다 신경쓸 것도 많고 동적 언어에 익숙해져 있어야 한다. 더욱이 컴파일러 없이 프로그래밍 하는 것은 깡초보에게 권장할 만한 것이 아닌게, 정적 언어에 대한 개념도 없이 동적 언어를 잡았다가는 오히려 더 헷갈릴 수 있다. 왜 마이크로소프트가 TypeScript를 만들었는지 잠시 생각해 보기 바란다. 더욱이 파이썬은 편집증이 의심될 정도로 객체 위주로 돌아가긴 하지만, 언어의 패러다임을 보면 절차지향, 객체지향, 함수형 모두 사용할 수 있는 언어다. 극단적으로 OOP를 지향하는 Java나 C#보다[15] 더 신경써야 할 것이 많다는 이야기. 하여튼 프로그래밍 자체를 마냥 쉬운 것으로 생각하다면 큰 코 다친다. 프로그래밍을 쉽게 할 수 있는 것과 좋게 하는 것에는 큰 차이가 있으며, '좋은' 프로그래밍을 하는 것은 프로그래머의 역량에 크게 좌우된다.
 
-Python provides a round function for rounding a float to the nearest integer. For tie-breaking, versions before 3 use round-away-from-zero: round(0.5) is 1.0, round(-0.5) is −1.0. Python 3 uses round to even: round(1.5) is 2, round(2.5) is 2.
+<h2>패키지 설치 및 관리</h2>
 
-Python allows boolean expressions with multiple equality relations in a manner that is consistent with general use in mathematics. For example, the expression a < b < c tests whether a is less than b and b is less than c. C-derived languages interpret this expression differently: in C, the expression would first evaluate a < b, resulting in 0 or 1, and that result would then be compared with c.
+오늘날 파이썬 라이브러리를 설치할 때는 주로 pip을 이용한다.
+pip install <패키지명>
+이 방식은 모든 패키지를 기본적으로 설치된 파이썬에 추가하기 때문에 몇 가지 문제가 생긴다.
 
-Python has extensive built-in support for arbitrary precision arithmetic. Integers are transparently switched from the machine-supported maximum fixed-precision (usually 32 or 64 bits), belonging to the python type int, to arbitrary precision, belonging to the Python type long, where needed. The latter have an "L" suffix in their textual representation.(In Python 3, the distinction between the int and long types was eliminated; this behavior is now entirely contained by the int class.) The Decimal type/class in module decimal (since version 2.4) provides decimal floating point numbers to arbitrary precision and several rounding modes.The Fraction type in module fractions (since version 2.6) provides arbitrary precision for rational numbers.
-Due to Python's extensive mathematics library, and the third-party library NumPy that further extends the native capabilities, it is frequently used as a scientific scripting language to aid in problems such as numerical data processing and manipulation.[citation needed]
+우선 여러 프로젝트를 동시에 작업할 때 호환성 문제가 생길 수 있다. 가령 프로젝트 A는 라이브러리 X의 1.1 버전을 사용하는데, 다른 프로젝트 B는 호환성 문제 때문에 X의 1.0 버전을 사용해야 할 경우가 있다. 이 경우 라이브러리 X의 1.1 버전과 1.0 버전을 동시에 설치할 수 없기 때문에, 가상 환경이라는 것을 만들어 프로젝트 A와 B에서 사용하는 패키지를 분리해야 한다. 가상 환경은 virtualenv라는 도구를 이용해 만들 수 있으며, Python 3.3부터는 표준 라이브러리에 포함된 venv 모듈을 직접 호출하여 만들 수 있다.
+# virtualenv를 사용할 경우
+virtualenv my-venv
+# venv를 사용할 경우
+python -m venv my-venv
+위의 명령은 현재 디렉토리에 my-venv라는 가상 환경을 생성한다. 일반적으로는 가상 환경 이름도 venv로 한다.
 
+또한 pip은 패키지 간의 호환성을 꼼꼼하게 따지지 않는다. 가령 위의 프로젝트 A와 B를 남들이 사용할 수 있게 라이브러리로 만들었다고 하자. 다른 컴퓨터에서 pip을 사용해 A를 설치하면 A가 필요한 X의 1.1 버전이 설치된다. 이후 B를 설치하면 X의 1.1 버전을 삭제하고 1.0 버전을 설치하기 때문에 A를 쓸 수 없게 된다.[20] npm과 같은 현대적인 패키지 관리자들은 패키지 호환성을 꼼꼼하게 검사하기 때문에 이런 상황에서는 B를 설치하려 하면 거부하지만, pip은 그런 거 없다.
 
+리눅스와 같이 자체적으로 파이썬을 탑재한 운영체제에서는 호환성 문제를 특히 신경써야 한다. 시스템에 내장된 핵심 도구들이 기본적으로 설치된 파이썬 라이브러리를 사용하기 때문이다. 만약 패키지를 설치하다가 호환성 문제가 생기면 최악의 경우 OS를 재설치해야 할 수 있다. 따라서 이런 OS에서는 시스템 내장 파이썬에 패키지를 설치하면 안 되며, 대신 #pip install --user로 사용자별 기본 환경에 설치하거나 별도의 가상 환경을 만들어야 한다.
 
+혹여나 프로그램 간 접합 등을 이유로 파이썬의 라이브러리를 사용하다 해당 기능을 외부 모듈(.msi, .exe, .pkg등의 설치파일)을 이용해 서버에 내장하여 돌리려는 때에는 정말 지옥을 맛볼 수 있다. 파이썬의 라이브러리가 불러오는 코어와 서버에 설치되는 모듈이 불러오는 코어가 다르기 때문. (다른 것이 코어 경로뿐이라면 그나마 낫지만 내부 로직마저 다르다면...?이런 경우는 상상하면 수명만 줄어들 뿐이다.) 이를 고치려면 에러의 콜스택을 따라가며 어디서 문제가 생겼을지 머리를 쥐어짜고 모듈 내의 코드를 뜯어 고치는 수밖에 없다.
 
+사실 이 문제는 다른 언어에서도 있을 수 있는 일이다. 다만 파이썬의 경우 패키지 버전의 통일성 부족과 만나버리는데, 버전에 따라 천차만별로 다를 이 대처법들이 인터넷 온갖 구석을 다 뒤져도 나오지 않아 아스트랄한 난이도를 선사한다. (나오긴 하지만, 해결되지 않는 경우가 많다. 물론 직접 질문을 올려도 대부분 답은 안나온다.) 차라리 처음 발견되면 사용하는 라이브러리나 내부 구조를 바꿔서 피해갈 수 있지만, 이미 진행될대로 진행된 프로젝트인 경우 그저 행운이 함께하길 빌 뿐이다.
 
+<h2>패키지 개발 및 배포</h2>
+
+파이썬으로 만든 프로그램이나 라이브러리를 다른 사람들이 사용할 수 있게 만들려면 복잡한 과정을 거쳐야 한다.
+
+파이썬의 라이브러리 개발 방식은 세월이 흐름에 따라 여러 차례 바뀌었다. 패키지 관리자라는 개념이 없어서 각자 프로그램의 소스 코드를 다운로드해 쓰던 시절에는 setup.py라는 설치 스크립트를 각자 만들어서 파이썬 프로그램과 함께 배포하는 것이 관행이었다.[21] 이를 언어 차원에서 지원하기 위해 Python 1.6부터는 distutils라는 빌드 도구를 기본 탑재하였다. 그런데 distutils는 자신의 프로그램이 필요로 하는 다른 패키지를 설치하지 못한다는 치명적인 문제가 있어서, 이를 해결하기 위해 setuptools라는 도구가 등장하였다.
+
+세월이 흘러 pip이라는 패키지 관리자와 PyPI라는 패키지 저장소가 등장하면서, setup.py를 만드는 기존의 방식의 단점이 부각되었다.
+setup.py를 실행하는 데 필요한 도구[23]가 있는지 확인하고, 없으면 자동으로 설치하거나 사용자에게 알려주는 기능이 없다.
+setup.py는 파이썬 코드로 작성하기 때문에 패키지 이름이나 버전과 같은 메타데이터를 추출하는 것이 까다롭다.
+setup.py에는 아무 파이썬 코드나 넣을 수 있으므로 악의적인 코드를 심을 수 있다.
+setup.py는 setuptools를 직접 import하기 때문에 사용자가 다른 빌드 도구를 선택할 수 없다.
+
+이 때문에 setup.py를 작성하는 대신 pyproject.toml[24]이라는 설정파일을 사용하는 표준안인 PEP-518이 등장하였다. pip 10.0부터는 pyproject.toml을 지원한다. 다만 운영체제 중에는 최신 버전의 pip을 탑재하지 않은 경우도 많기 때문에 pip을 업데이트해야 한다. flit이나 Poetry 등의 개발 도구를 사용하면 setup.py를 작성하지 않고 패키지를 만들어 배포할 수 있다. 물론 예전 방식대로 distutils/setuptools를 사용하면서 setup.py과 pyproject.toml를 함께 사용하는 것도 가능하다.
+
+Python 으로 개발한 SW를 공개 배포하는 경우 소스 코드가 그대로 노출된다. 예를 들어 상용 프로그램이나, 보안을 유지해야 하는 경우 파이썬 코드를 숨겨야 한다.
+Py파일을 Bytecode로 컴파일하는 방법#
+PyInstaller를 사용해서 EXE 또는 ELF 형식의 실행 파일을 만드는 방법 사용법과 주의사항
+가장 쉬운 방법은 byte code인 pyc파일로 변환하는 방법이다. 하지만, 이 방법은 조금만 노력하면 디컴파일이 쉽게 되기 때문에 코드를 숨길 수 없고 다만 코드 보기를 조금 어렵게 만드는 것으로 이해해야 한다. Pyc 파일보다 나은 방법은 PyInstaller를 사용하는 방법이다. PyInstaller는 Py파일을 종속성을 분석해서 필요한 shared lib를 하나에 폴더에 패키징하고, EXE나 ELF의 실행 파일을 생성하여 소스 코드를 숨길 수 있다. PyInstaller로 패키징하는 과정에서 --key 옵션을 사용하면 AES256 으로 Bytecode를 암호화한다.
 
 
 
@@ -71,22 +91,51 @@ Due to Python's extensive mathematics library, and the third-party library NumPy
 
 
 <h2>Ruby</h2>
-Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language. It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
 
-According to the creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp. It supports multiple programming paradigms, including functional, object-oriented, and imperative. It also has a dynamic type system and automatic memory management.
+스크립트 언어의 일종. 2021년 1월 기준 최신 안정화 버전은 3.0.0이다. 창시자는 마츠모토 유키히로(Matz)로 1995년에 발표되었다. 동서양 모두 마츠라는 애칭으로 부른다. 트위터 bio를 Ruby(Ruby의 아빠)라고 쓸 정도로 Ruby에 대한 애정이 강하다. 그 때문인지 Ruby 유저들 역시 숫자는 적지만 언어에 대한 애착이 강한 편이다.
 
-<h2>Semantics</h2>
-Ruby is object-oriented: every value is an object, including classes and instances of types that many other languages designate as primitives (such as integers, booleans, and "null"). Variables always hold references to objects. Every function is a method and methods are always called on an object. Methods defined at the top level scope become methods of the Object class. Since this class is an ancestor of every other class, such methods can be called on any object. They are also visible in all scopes, effectively serving as "global" procedures. Ruby supports inheritance with dynamic dispatch, mixins and singleton methods (belonging to, and defined for, a single instance rather than being defined on the class). Though Ruby does not support multiple inheritance, classes can import modules as mixins.
+Python과 Perl, Smalltalk, Ada, Lisp, Eiffel 등의 프로그래밍 언어로부터 일부 문법 사항을 계승하고 발전시켜, 일반적인 목적에 적합하게 만든 언어이다. 특히 Python은 지금도 서로 영향을 주고 받는 라이벌 관계. 언어의 문법이 쉽고 확장이 편리해서, 잘 디자인된 라이브러리를 이용하면 프로그래밍을 처음 시작한 사람도 복잡한 작업을 상대적으로 쉽게 할 수 있다는 점이 매력적이다. 그 때문에 객체 지향 프로그래밍 언어지만, 객체 지향에 대한 흔한 선입견과는 달리 초보자들도 쉽게 다룰 수 있다.
 
-Ruby has been described as a multi-paradigm programming language: it allows procedural programming (defining functions/variables outside classes makes them part of the root, 'self' Object), with object orientation (everything is an object) or functional programming (it has anonymous functions, closures, and continuations; statements all have values, and functions return the last evaluation). It has support for introspection, reflection and metaprogramming, as well as support for interpreter-based threads. Ruby features dynamic typing, and supports parametric polymorphism.
+세계 10대 프로그래밍 언어 중 하나로 꼽히기도 하였으며, 2018년 새로 생성된 저장소 개수를 기준으로 GitHub에서 인기언어 5위의 자리를 차지했다. Made in Japan이라서인지 일본에서는 Python보다도 인기가 많다. 특히 웹 개발에서는 백엔드에 Ruby on Rails와 함께 많이 쓰이고, 심지어 임베디드에도 쓰이는 등 다방면에 절찬리 쓰이는 중이다. macOS의 경우 El Capitan(10.11)부터 최신 버전이 기본적으로 설치되어 나간다. JetBrains의 RubyMine이라는 IDE를 사용하면 Ruby와 RoR 코드를 손쉽게 편집하고 배포할 수 있다. 비주얼 스튜디오 코드 같은 텍스트 에디터에서도 Ruby 플러그인을 제공한다.
 
-According to the Ruby FAQ, the syntax is similar to Perl and the semantics are similar to Smalltalk, but it differs greatly from Python.
+이름의 유래는 창시자 지인의 탄생석에서 따왔다고 한다. 즉 진짜로 보석 이름에서 따온 것.
 
-<h2>Syntax</h2>
-The syntax of Ruby is broadly similar to that of Perl and Python. Class and method definitions are signaled by keywords, whereas code blocks can be both defined by keywords or braces. In contrast to Perl, variables are not obligatorily prefixed with a sigil. When used, the sigil changes the semantics of scope of the variable. For practical purposes there is no distinction between expressions and statements. Line breaks are significant and taken as the end of a statement; a semicolon may be equivalently used. Unlike Python, indentation is not significant.
+<h2>버전</h2>
 
-One of the differences from Python and Perl is that Ruby keeps all of its instance variables completely private to the class and only exposes them through accessor methods (attr_writer, attr_reader, etc.). Unlike the "getter" and "setter" methods of other languages like C++ or Java, accessor methods in Ruby can be created with a single line of code via metaprogramming; however, accessor methods can also be created in the traditional fashion of C++ and Java. As invocation of these methods does not require the use of parentheses, it is trivial to change an instance variable into a full function, without modifying a single line of calling code or having to do any refactoring achieving similar functionality to C# and VB.NET property members.
+루비의 버전은 A.B.C 형식으로 표현하며 일반적인 오픈소스 진영의 표기와 마찬가지로 B에 해당하는 숫자가 홀수면 개발버전, 짝수면 안정화 버전이다. 오픈 진영에서는 일반적으로 이렇게 표기한다. 모두 다 이 법칙을 지키는건 아니지만, 대부분의 오픈 소스 진영의 프로그램들은 이렇게 분류가 가능하다. 단 1.9.x는 예외. 1.9 자체가 안정 버전. 또한 루비는 1.9버전을 기점으로 큰 성능의 향상이 있었으며, 이때 유저들 또한 많이 유입되었다. 이 때문에 1.9버전은 지금도 사용되는 곳이 간간이 있지만, 구버전을 사용해서 득볼 수 있는 것은 없으므로 특수한 케이스가 아니라면 최신 버전을 사용하자.
 
-Python's property descriptors are similar, but come with a tradeoff in the development process. If one begins in Python by using a publicly exposed instance variable, and later changes the implementation to use a private instance variable exposed through a property descriptor, code internal to the class may need to be adjusted to use the private variable rather than the public property. Ruby’s design forces all instance variables to be private, but also provides a simple way to declare set and get methods. This is in keeping with the idea that in Ruby, one never directly accesses the internal members of a class from outside the class; rather, one passes a message to the class and receives a response.
+처리기로는 공식 인터프리터인 MRI(Matz's Ruby Interpreter. C언어로 만들어져서 CRuby라고 불리기도 한다)를 필두로 MacRuby, JRuby[2], IronRuby[3], Rubinius, MagLev 등 여러가지가 있다. 물론 표준 기능은 원칙상 다 같아야 하나, 어떤 언어로 어떤 가상 머신 위에서 어떻게 만드느냐의 차이가 있다. 근데 문제는 루비는 호환성이라는 개념을 반정도 쓰레기통에 갖다 버려서 인터프리터 종류는 둘째치고 버전이 다르다고 호환이 안되는 경우가 왕왕 있었다. 이 때문에 루비는 유달리 최신버전이 많이 강조된다.
 
-See the Examples section below for samples of code demonstrating Ruby syntax.
+<h2>순수 객체지향</h2>
+
+순수 객체지향적 언어는 원시 자료형이 사실상 존재하지 않고 모든 것은 객체인 언어를 말하는데, 루비가 이런 언어 중 하나이다. 다른 언어 중 예를 들어서 Java의 경우에는 int, char 등 원시 자료형이 있고, 그것을 Boxing한 Integer, Character 등의 래퍼 클래스가 있다. 루비는 이러한 클래스만 존재하고 원시 자료형이라 구분지을 만한 것이 존재하지 않는다. 그 외에도 모듈이 있는데 모듈도 클래스다. 메소드도 당연히 클래스. 그리고 이 클래스는 모두 열려있다. 이를 OpenClass라고 하는데, 한마디로 사용자가 마음대로 수정하는 것이 가능하다.
+
+
+<h2>함수형 언어</h2>
+
+특이한 점이라면 스칼라와 같은 함수형 언어로서의 특징도 가진다는 것이다. 언어차원에서 Block이라는 클래스를 지원하기 때문에 변수나 메소드의 인수로 코드의 집합, 즉 우리가 흔히 함수나 메소드로 부르는 그것을 전달할 수 있다. 그런 관계로 당연히 메소드 안에서 메소드를 생성 가능하며, 클로저를 지원한다. 또, 요즘의 Java[4], C++, Python과 같은 고급언어는 거의 모두 지원하는 람다도 있다. 게다가 아래의 메타 프로그래밍과 합쳐서 더욱 강력히 작용하기도 한다.
+
+<h2>메타 프로그래밍</h2>
+
+가장 큰 장점은 언어 자체를 쉽게 확장시킬 수 있는 '메타 프로그래밍'을 지원한다는 것이다. 요즘 C++ 등의 언어도 지원하는 상황이긴 하지만 루비는 객체지향적인 특징과 함수형 언어적인 특징이 결합되어 더욱 강력하게 나타난다. 사실 마츠모토 유키히로 본인 자신부터 "이맥스는 내 인생을 어떻게 바꾸었나" 라는 슬라이드쇼를 할정도의 진성 이맥스 빠돌이였고, 거기서 Elisp intepreter로서의 이맥스의 소스코드를 보면서 언어 구현하는 방법을 배웠다고 한다. 그런 관계로 이런 메타 프로그래밍은 언어 차원에서 권장하는 기능이고 매우 큰 프로그램도 매우 작은 소스로 가능하게 만들어준다.
+
+<h2>그 외 특징</h2>
+
+모듈과 클래스를 다른 모듈이나 클래스 또는 객체에 붙여서 확장시키는 개념을 최초로 도입. 다중 상속에 대한 새로운 해석/구현으로 볼 수 있으며 실제로 C++의 것보다 많이 간편하고 써먹기도 쉽다. 나중에는 C# 등에도 이러한 개념이 비슷하게 도입되었다.
+load, require 등으로 외부 소스를 참조할 때 소스 파일의 실제 경로를 지정해 줄 수 있다는 것도 특징이라면 특징. 같은 인터프리터 언어인 펄, 파이썬, 루아는 이게 안된다.
+0을 false로 취급하는 여러 언어들과는 달리 0도 true로 취급한다. 이 점은 루아도 비슷하다.
+
+반대로 문제점이 있다면 실행 속도가 느리다는 것이다. 2.x 버전 기준으로 컴파일 언어에 비해 성능이 비교적 떨어지는 Python과 엎치락뒤치락 하는 편이다.
+
+<h2>웹 프레임워크</h2>
+
+Ruby on Rails는 풀 스택 웹 프레임워크이고, non full-stack 웹 프레임워크로는 Sinatra 등이 있다. Python의 Flask에 해당하는 게 Ruby의 Sinatra이다. 대표적인 통합 개발 환경으로는 JetBrains의 RubyMine이 있다. 루비광산 텍스트 에디터 중에서는 Ruby 플러그인이 제공되는 비주얼 스튜디오 코드가 많이 쓰이고 있다.
+
+에어비앤비, 킥스타터, GitHub 등이 루비 온 레일즈를 사용한다.
+
+루비와 루비 온 레일즈를 전문으로 공부하는 사이트도 생겼다. 코드카데미 강좌
+
+루비 온 레일스 코리아 커뮤니티(RORLAB) http://rorlab.org 에서 만든 초보자를 위한 레일스 가이드 http://rorlab.gitbooks.io/railsguidebook 가 있다.
+
+
+
