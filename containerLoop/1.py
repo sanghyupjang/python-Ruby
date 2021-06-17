@@ -1,4 +1,4 @@
-members = ['egoing', 'leezche','graphittie']
+members = ['sanghyup', 'sanghyup1','sanghyup2']
 i = 0
 while i < len(members):
     print(members[i])
